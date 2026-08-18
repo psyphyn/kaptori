@@ -1,0 +1,10 @@
+name: kaptori
+services:
+  kaptori:
+    image: kaptori:local
+    container_name: kaptori-app
+    restart: unless-stopped
+    ports:
+      - "3459:3459"
+    env_file:
+      - ../.env

@@ -1,0 +1,11 @@
+10:36 watcher armed — polling MINI_JOSHUA every 5m (SSH connectivity)
+10:36 HOST ONLINE after 0 polls — starting deploy
+==> Preflight: confirm host reachable and Docker present
+'29.6.2'
+==> Safety check: show what's already running (should include marks_project)
+docker: 'docker ps' accepts no arguments
+
+Usage:  docker ps [OPTIONS]
+
+Run 'docker ps --help' for more information
+10:36 deploy finished exit=1
