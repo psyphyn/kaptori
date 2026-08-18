@@ -1,0 +1,15 @@
+# Isolated Kaptori stack for the remote server.
+# Runs alongside marks_project without touching its containers, ports, networks,
+# or volumes. Bring up with:  docker compose -p kaptori -f docker-compose.deploy.yml up -d --build
+name: kaptori
+services:
+  kaptori:
+    build: ..
+    container_name: kaptori-app
+    restart: unless-stopped
+    ports:
+      - "3459:3459"          # marks_project uses 3000/5432/6379 — no overlap
+    env_file:
+      - ../.env
+    volumes:
+      - ../data:/app/data    # persist enriched data/profiles across restarts
