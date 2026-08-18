@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Kaptori — a reading companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400..600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="app.css" />
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="kappa-crest" viewBox="0 0 64 64">
+    <circle cx="32" cy="38" r="19" fill="currentColor"/>
+    <path d="M14 35 Q14 23 21 18 L24 25 L28 16 L32 23 L36 16 L40 25 L43 18 Q50 23 50 35 Q41 27 32 27 Q23 27 14 35 Z" fill="currentColor"/>
+    <ellipse cx="32" cy="16" rx="10" ry="4" fill="#FAF9F6" stroke="currentColor" stroke-width="1.5"/>
+    <ellipse cx="32" cy="15.2" rx="6" ry="1.8" fill="#B8893B"/>
+    <circle cx="25.5" cy="38" r="2.4" fill="#FAF9F6"/>
+    <circle cx="38.5" cy="38" r="2.4" fill="#FAF9F6"/>
+    <path d="M28.5 44.5 L32 42 L35.5 44.5 L32 48 Z" fill="#B8893B"/>
+  </symbol>
+</svg>
+
+<!-- ————— Welcome / sign-in ————— -->
+<div class="welcome" id="welcome">
+  <div class="mosaic" id="mosaic"></div>
+  <div class="welcome-shade"></div>
+  <div class="welcome-card">
+    <svg class="crest" width="54" height="54"><use href="#kappa-crest"/></svg>
+    <h1 class="welcome-title">Kaptori</h1>
+    <p class="welcome-tag">A reading companion that knows your shelves</p>
+    <div class="welcome-actions">
+      <button class="signin-btn" data-provider="Google">
+        <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.27-4.74 3.27-8.1Z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84A11 11 0 0 0 12 23Z"/><path fill="#FBBC05" d="M5.84 14.1a6.6 6.6 0 0 1 0-4.2V7.06H2.18a11 11 0 0 0 0 9.88l3.66-2.84Z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15A11 11 0 0 0 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52Z"/></svg>
+        Continue with Google
+      </button>
+      <button class="signin-btn" data-provider="Apple">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08ZM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25Z"/></svg>
+        Continue with Apple
+      </button>
+      <button class="demo-btn" id="enterDemo">Enter the private demo</button>
+    </div>
+    <p class="welcome-foot">Built on a real library — <span id="welcomeCount">a</span> books and counting</p>
+  </div>
+</div>
+
+<!-- ————— App ————— -->
+<header class="topbar">
+  <div class="wordmark">
+    <svg class="crest" width="30" height="30"><use href="#kappa-crest"/></svg>
+    <span>Kaptori</span>
+  </div>
+  <div class="topbar-actions">
+    <button class="btn quiet" id="historyBtn">History</button>
+    <button class="btn quiet" id="profileBtn">Reader profile</button>
+    <button class="btn quiet" id="roadmapBtn">Roadmap</button>
+    <button class="btn quiet" id="resetBtn">New conversation</button>
+  </div>
+</header>
+
+<div class="layout">
+
+  <aside class="library">
+    <div class="library-head">
+      <h2>Your Library</h2>
+      <span class="count" id="bookCount">—</span>
+    </div>
+    <input id="bookSearch" class="search" type="search" placeholder="Search titles or authors" autocomplete="off" />
+    <div class="chips" id="chips">
+      <button class="chip active" data-filter="all">All</button>
+      <button class="chip" data-filter="general">General</button>
+      <button class="chip" data-filter="golf">Golf</button>
+      <button class="chip" data-filter="mined">Researched</button>
+    </div>
+    <div class="grid" id="bookGrid"></div>
+  </aside>
+
+  <main class="chat">
+    <div class="pages" id="pages"></div>
+    <div class="status-line" id="statusLine"></div>
+    <form class="composer" id="composer">
+      <textarea id="input" rows="1" placeholder="What are you chasing?" autocomplete="off"></textarea>
+      <button type="submit" id="sendBtn" aria-label="Send">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </button>
+    </form>
+  </main>
+</div>
+
+<!-- ————— Book detail ————— -->
+<div class="veil" id="veil"></div>
+<aside class="panel book-panel" id="bookPanel">
+  <button class="panel-close" id="bookClose" aria-label="Close">✕</button>
+  <div class="book-hero">
+    <img id="bpCover" class="bp-cover" alt="" />
+    <div class="bp-head">
+      <h2 id="bpTitle"></h2>
+      <p class="bp-author" id="bpAuthor"></p>
+      <div class="bp-meta" id="bpMeta"></div>
+    </div>
+  </div>
+  <div class="bp-subjects" id="bpSubjects"></div>
+  <button class="btn primary wide" id="bpDiscuss">Discuss this book</button>
+  <section class="bp-author" id="bpAuthorProfile"></section>
+  <section class="bp-mined" id="bpMined"></section>
+</aside>
+
+<!-- ————— History ————— -->
+<aside class="panel history" id="historyPanel">
+  <button class="panel-close" id="historyClose" aria-label="Close">✕</button>
+  <h2>Past conversations</h2>
+  <p class="lede">Every conversation is kept, searchable, and resumable — and the reviewer studies each one after it ends.</p>
+  <input id="historySearch" class="search" type="search" placeholder="Search conversations" autocomplete="off" />
+  <div id="historyList"></div>
+</aside>
+
+<!-- ————— Reader profile ————— -->
+<aside class="panel profile" id="profilePanel">
+  <button class="panel-close" id="profileClose" aria-label="Close">✕</button>
+  <h2>Reader profile</h2>
+  <p class="lede">What Kaptori has learned about you so far. It updates itself after every exchange, and every conversation draws on it.</p>
+  <div id="profileBody"></div>
+</aside>
+
+<!-- ————— Author profile ————— -->
+<aside class="panel author-panel" id="authorPanel">
+  <button class="panel-close" id="authorClose" aria-label="Close">✕</button>
+  <div id="authorBody"></div>
+</aside>
+
+<!-- ————— Talk to the author ————— -->
+<div class="author-chat" id="authorChat">
+  <header class="ac-bar">
+    <div class="ac-who">
+      <img id="acPhoto" class="ac-photo" alt="" />
+      <div>
+        <div class="ac-name" id="acName"></div>
+        <div class="ac-note">a simulation grounded in their public work</div>
+      </div>
+    </div>
+    <button class="btn quiet" id="acClose">Close</button>
+  </header>
+  <div class="ac-pages" id="acPages"></div>
+  <div class="status-line" id="acStatus"></div>
+  <form class="composer ac-composer" id="acComposer">
+    <textarea id="acInput" rows="1" placeholder="Ask them anything…" autocomplete="off"></textarea>
+    <button type="submit" id="acSend" aria-label="Send">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M4 12h14m0 0-6-6m6 6-6 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+  </form>
+</div>
+
+<!-- ————— Roadmap ————— -->
+<aside class="panel roadmap" id="roadmap">
+  <button class="panel-close" id="roadmapClose" aria-label="Close">✕</button>
+  <h2>Where this is going</h2>
+  <p class="lede">This is the first sitting. Everything below is what we build on top of it.</p>
+  <ol class="roadmap-list">
+    <li><strong>Voice.</strong> Full spoken conversation — talk to it, and it talks back.</li>
+    <li><strong>A real recommendation engine.</strong> ISBN &amp; catalog classification, a seminal-works-first taxonomy, similar-author graphs, and a deliberate weight for the fringe.</li>
+    <li><strong>The wider conversation.</strong> The research miner grows up: reviews, critical essays, lectures and podcast discussions found, transcribed, and woven into every conversation — at scale, across the whole shelf.</li>
+    <li><strong>Author intelligence.</strong> Every author profiled from public sources — photo, school, lineage, stance, politics, how they come across in interviews, and where they're contested — so the companion argues from a real understanding of who wrote what. A skeptic agent verifies every finding before it's trusted.</li>
+    <li><strong>A reader profile that deepens.</strong> Durable memory of what drives you, carried across every conversation.</li>
+    <li><strong>The living library.</strong> Auto-sync of purchases, reading status, and notes.</li>
+    <li><strong>The journey view.</strong> A visual map of where your reading has taken you — and the frontier just past it.</li>
+  </ol>
+</aside>
+
+<script src="app.js"></script>
+</body>
+</html>

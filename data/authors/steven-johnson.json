@@ -1,0 +1,49 @@
+{
+ "name": "Steven Johnson",
+ "lived": "born 1968 — contemporary",
+ "one_line": "A bestselling American popular-science-and-history writer — and early-web entrepreneur turned Google AI executive — who has spent thirty years arguing that progress is real, that good ideas come from networks rather than geniuses, and that the long view of history is far more optimistic than the news cycle suggests.",
+ "bio": "Steven Berlin Johnson (born June 6, 1968) studied semiotics at Brown and did graduate work in English literature at Columbia before abandoning academia in the mid-1990s for the emerging web, co-founding FEED, one of the first serious online magazines, and later Plastic.com and the hyperlocal news startup outside.in. His first book, Interface Culture (1997), read software design as a cultural form; Emergence (2001) imported complexity theory into mainstream nonfiction; and from there he built a remarkably consistent career of roughly one big-idea book every two years — Mind Wide Open, Everything Bad Is Good for You, The Ghost Map, The Invention of Air, Where Good Ideas Come From, Future Perfect, How We Got to Now, Wonderland, Farsighted, Enemy of All Mankind, Extra Life, and The Infernal Machine. He extended the franchise into television (the Emmy-winning PBS/BBC series How We Got to Now and Extra Life), podcasting (American Innovations, The TED Interview), and a widely read newsletter, Adjacent Possible. Since 2023 he has been Editorial Director at Google Labs and a co-creator of NotebookLM, making him a rare case of a technology writer who now helps build the technology he writes about.",
+ "known_for": [
+  "\"Where Good Ideas Come From\" and its taxonomy of innovation — the slow hunch, liquid networks, exaptation, serendipity, error",
+  "Popularizing Stuart Kauffman's \"adjacent possible\" as a general theory of how change happens",
+  "\"The Ghost Map\" — the 1854 Broad Street cholera outbreak, John Snow, and cities as engines of knowledge",
+  "\"Everything Bad Is Good for You\" and the \"Sleeper Curve\" claim that popular culture has grown cognitively more demanding",
+  "\"Extra Life\" — the argument that doubling human life expectancy was the achievement of public health, regulation and activism more than heroic medicine",
+  "\"Enemy of All Mankind\" — Henry Every's 1695 attack on the Ganj-i-Sawai as the hinge point for global law, empire, the East India Company and the first tabloid manhunt",
+  "\"Future Perfect\" and the coinage \"peer progressive\"",
+  "Co-creating NotebookLM at Google Labs, including its viral Audio Overviews feature"
+ ],
+ "school": "No formal school. He sits in the lineage of complexity-theory popularization and Whole Earth–descended techno-humanism, crossed with the \"long zoom\" narrative history that dominated 2000s American nonfiction. Adjacent to, and partly a precursor of, the \"progress studies\" and \"abundance\" tendencies of the 2020s.",
+ "lineage": "Builds visibly on Jane Jacobs (bottom-up urban order), Stuart Kauffman and the Santa Fe complexity school (the adjacent possible, self-organization), Stephen Jay Gould and Darwin's coral reef as a model of generative systems, Marshall McLuhan and his semiotics training for reading media as environment, and the networked-commons thinkers of the 2000s — Yochai Benkler, Clay Shirky, Kevin Kelly, Stewart Brand. Sibling to Malcolm Gladwell, Matt Ridley and Tim Harford in the big-idea nonfiction boom he helped define; downstream, his vocabulary has been absorbed wholesale by innovation consultants, TED culture, and the progress-optimist writers (Cowen, Collison, Thompson) who now make his case in policy terms.",
+ "stance": "History is a story of cumulative, largely underappreciated progress, and the engine of that progress is not the lone genius or the free market alone but dense, open networks — cities, coffeehouses, coral reefs, the web, scientific commons — in which existing parts recombine into new possibilities. It follows that most catastrophism is a failure of time horizon: zoom out far enough and the boring machinery of institutions, public health, standards, and shared knowledge has delivered gains no individual invented. His corollary is political: because value is created collectively, credit and governance should be distributed the same way.",
+ "blind_spots": "His method is pattern-finding, not archival discovery: the frameworks are elegant, the causal claims often unfalsifiable, and critics say he retrofits history to the schema — the seven patterns of innovation explain everything and therefore predict little. Historians have grumbled that his popular histories rest on secondary sources while making outsized \"this changed everything\" claims (Enemy of All Mankind's single-match framing being a case in point). Everything Bad Is Good for You remains his most attacked book, accused of conflating cognitive complexity with cultural worth and of cherry-picking evidence. Most importantly, the networked optimism of Future Perfect (2012) aged badly: the peer-to-peer internet consolidated into a handful of ad monopolies, and \"peer\" platforms became gig-economy labor arbitrage — a distributional and power-analysis gap that his systems-level vocabulary tends to smooth over. His current position at Google makes his AI enthusiasm structurally non-disinterested, and he is candid that he is now a participant rather than an observer.",
+ "contested": "respected",
+ "politics": "Discernibly on the American left-of-center, but idiosyncratically so and by his own description not conventionally partisan. In Future Perfect (2012) he coined \"peer progressive\" to name a politics wary of centralized bureaucracy but explicitly not libertarian — pro-government-as-platform, enthusiastic about participatory budgeting, open standards, public funding of collaborative goods, and skeptical of both Big Government hierarchy and market fundamentalism. Extra Life is an unmistakably progressive book in substance: it credits regulation, public health bureaucracies, muckraking journalism and activism for the doubling of human lifespan, which puts him at odds with libertarian techno-optimists who share his cheerfulness. He is a vocal defender of vaccines and public-health institutions, and his work was praised publicly by Barack Obama. He is not an activist or an electoral commentator, and he generally frames his arguments as pro-progress rather than pro-party — treat any sharper labeling as inference rather than record.",
+ "public_views": [
+  "Innovation is a network property, not a personality trait — environments that allow ideas to collide and recombine matter more than incentives or individual brilliance",
+  "Declinism is empirically wrong; the correct response to catastrophic news is to lengthen the time frame, not to deny the problems",
+  "The greatest achievement in human history — the doubling of life expectancy — was won by unglamorous, collective, often regulatory work, and we systematically fail to celebrate it",
+  "Cities are the original innovation technology, and density is a moral and intellectual good",
+  "We should judge new media by what cognitive demands it makes, not by whether it resembles books",
+  "Good decision-making is a learnable craft of scenario-building, mapping full consequence, and resisting narrow framing (Farsighted)",
+  "AI tools should be grounded in sources the user supplies — closed, citable, verifiable — rather than open-ended oracles, which is the design argument behind NotebookLM",
+  "Keeping a commonplace book — a searchable, promiscuously cross-linked archive of quotes and notes — is the single most useful habit for a thinking writer"
+ ],
+ "interview_notes": "Genial, fluent, and relentlessly constructive; he is one of the least combative public intellectuals in his weight class, and interviewers rarely leave with conflict. He thinks in extended historical set-pieces and reliably answers a question by rewinding two hundred years, then landing the analogy. Recurring vocabulary — the adjacent possible, the long zoom, the slow hunch, liquid networks — recurs so consistently across talks that it functions as a house style. He is unusually forthcoming about process (note-taking systems, how research becomes structure), talks openly about being an optimist by disposition and argument, and in the Google era has become a fairly explicit product evangelist, which some longtime readers find a shift in register from his writerly voice.",
+ "personal": "Born in 1968, a semiotics major at Brown and a graduate student in English at Columbia who left the academic track to help invent web journalism in the mid-1990s — that pivot from literary theory to startups explains a lot about a writer who reads software, sewers and pirate ships with the same interpretive toolkit. He has described himself as a compulsive archivist since childhood, and his obsession with search, notes, and organized memory runs directly from his hand-built quote databases to the AI research tool he now helps build. He splits his time between Brooklyn and Marin County, California, and has three sons; he has held a distinguished-writer post at NYU's journalism school.",
+ "key_topics": [
+  "innovation and the history of ideas",
+  "complexity, emergence and networks",
+  "urban history and cities",
+  "history of science, medicine and public health",
+  "media and technology criticism",
+  "piracy, empire and the origins of international law",
+  "decision-making",
+  "artificial intelligence and tools for thought",
+  "progress and techno-optimism"
+ ],
+ "wikipedia_title": "Steven Berlin Johnson",
+ "confidence": "high",
+ "photo": "steven-johnson.jpg",
+ "profiled_at": "2026-08-17T17:51:59.741Z"
+}

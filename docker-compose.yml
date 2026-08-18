@@ -1,0 +1,9 @@
+services:
+  kaptori:
+    build: .
+    ports:
+      - "3459:3459"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
